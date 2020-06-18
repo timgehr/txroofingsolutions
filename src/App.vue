@@ -2,7 +2,7 @@
   <div id="app">
     <div id="topper">
       <div id="topper-content">
-        <img src="./assets/logo1.jpg" style="height: 80px;" />
+        <img id="logo1" src="./assets/logo1.jpg" style="height: 80px;" />
         <div id="forehead"></div>
         <div id="callToday">
           <h2>Call Today For Your Free Roofing Inspection:</h2>
@@ -22,7 +22,7 @@
       <router-link to="/free-inspection">Schedule Free Inspection</router-link>
     </div>
     <div id="navselect">
-      <select  class="nav-select" v-model="key" @change="navRoute($event)">
+      <select  class="selectnav" v-model="key" @change="navRoute($event)">
         <option selected="selected" value="">Home</option>
         <option value="roofing-services">Services</option>
         <option value="service-area">Service Area</option>
@@ -38,7 +38,9 @@
       Call Today For Your Free Roofing Inspection: <a href=this.callNum>{{localNumber}}</a>
     </div>
     -->
-    <router-view />
+    <div id="router-container">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -66,6 +68,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #000000;
+}
+
+#router-container {
+  margin-top: 170px;
 }
 
 #topper {
@@ -121,7 +127,7 @@ export default {
   height: 30px;
   top: 110px;
   background-color: white;
-  box-shadow: 0px 5px 7px 0px #00000015;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
 }
 
 #nav a {
@@ -145,7 +151,7 @@ export default {
   height: 30px;
   top: 110px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 5px 7px 0px #00000015;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
 }
 
 #navselect select {
@@ -159,8 +165,12 @@ export default {
   color: #2e835d;
 }
 
-#nav-select{
-  color:red;
+.selectnav{
+  font-family: "Open Sans", sans-serif;
+  border: 0px;
+  margin-left: 40px;
+  color: black;
+  font-weight: 400;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -170,6 +180,35 @@ export default {
   }
   #navselect {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #topper-content {
+  height: 220px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  }
+  #router-container{
+  margin-top: 280px;
+  }
+  #navselect {
+    top: 220px;
+  }
+  #logo1{
+    object-fit:contain;
+  }
+  #callToday {
+    text-align: center;
+    margin: 0px;
+  }
+  #navselect{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #homeBackImg{
+    top: 280px !important;
   }
 }
 </style>

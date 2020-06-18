@@ -21,7 +21,6 @@ export default {
 <style>
 
 .page {
-  margin-top: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,11 +47,11 @@ export default {
 }
 
 #home-message h1 {
-  font-size: min(35px, 3vw);
+  font-size: min(35px, 3.2vw);
 }
 
 #home-message h3 {
-  font-size: min(22px, 2vw);
+  font-size: min(22px, 2.5vw);
   font-weight: 400;
 }
 hr {
@@ -70,6 +69,6 @@ hr {
   height: 40vw;
   max-height: 350px;
   z-index: -1;
-  opacity: 0.9;
+  opacity: 0.93;
 }
 </style>
