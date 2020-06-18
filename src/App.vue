@@ -22,15 +22,32 @@
       <router-link to="/free-inspection">Schedule Free Inspection</router-link>
     </div>
     <div id="navselect">
-      <select  class="selectnav" v-model="key" @change="navRoute($event)">
-        <option selected="selected" value="">Home</option>
-        <option value="roofing-services">Services</option>
-        <option value="service-area">Service Area</option>
-        <option value="learn">Learn</option>
-        <option value="about">About Us</option>
-        <option value="blog">Blog</option>
-        <option value="free-inspection">Schedule Free Inspection</option>
-      </select>
+      <div class="dropdown" v-on:click="ddnShow = !ddnShow">
+        <span>{{activePage}}</span>
+        <div class="dropdown-content" v-if="ddnShow">
+          <p v-on:click="ddnNav('Home')">
+            <router-link to="/">Home</router-link>
+          </p>
+          <p v-on:click="ddnNav('Services')">
+            <router-link to="/roofing-services">Services</router-link>
+          </p>
+          <p v-on:click="ddnNav('Service Area')">
+            <router-link to="/service-area">Service Area</router-link>
+          </p>
+          <p v-on:click="ddnNav('Learn')">
+            <router-link to="/learn">Learn</router-link>
+          </p>
+          <p v-on:click="ddnNav('About Us')">
+            <router-link to="/about">About Us</router-link>
+          </p>
+          <p v-on:click="ddnNav('Blog')">
+            <router-link to="/blog">Blog</router-link>
+          </p>
+          <p v-on:click="ddnNav('Schedule Free Inspection')">
+            <router-link to="/free-inspection">Schedule Free Inspection</router-link>
+          </p>
+        </div>
+      </div>
     </div>
     <div id="toparea"></div>
     <!--
@@ -48,6 +65,8 @@
 export default {
   data() {
     return {
+      ddnShow: false,
+      activePage: 'Home',
       id: 1,
       callStr: "(817) 784-7225",
       callNum: "tel:8177847225"
@@ -55,7 +74,10 @@ export default {
   },
   methods: {
     navRoute(event) {
-      this.$router.push({path:'/' + event.target.value})
+      this.$router.push({ path: "/" + event.target.value });
+    },
+    ddnNav(page){
+      this.activePage = page;
     }
   }
 };
@@ -165,20 +187,56 @@ export default {
   color: #2e835d;
 }
 
-.selectnav{
+.selectnav {
   text-align: center;
   height: 40px;
   width: fit-content;
   font-family: "Open Sans", sans-serif;
   border: 0px;
-  outline:0px;
+  outline: 0px;
   margin-left: 40px;
   color: black;
   font-weight: 400 !important;
   font-size: 26px !important;
   padding-left: 60px !important;
   appearance: none;
-  background: rgb(255, 255, 255) url("./assets/menu-24px.svg") no-repeat center left;
+  background: rgb(255, 255, 255) url("./assets/menu-24px.svg") no-repeat center
+    left;
+}
+
+.dropdown{
+  cursor: pointer;
+  height: 40px;
+  width: fit-content;
+  font-family: "Open Sans", sans-serif;
+  border: 0px;
+  outline: 0px;
+  margin-left: 40px;
+  color: black;
+  font-weight: 400 !important;
+  font-size: 26px !important;
+  padding-left: 60px !important;
+  appearance: none;
+  background: rgb(255, 255, 255) url("./assets/menu-24px.svg") no-repeat center
+    left;
+}
+
+.dropdown-content{
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  width: 100vw;
+  font-size: 20px !important;
+  box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
+  left: 0px;
+  text-align: left;
+  padding-left: 40px;
+  z-index: 1;
+}
+
+.dropdown-content a{
+  text-decoration: none;
+  color: black;
 }
 
 .selectnav-content {
@@ -186,16 +244,15 @@ export default {
   position: absolute;
   background-color: #612323;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
 }
 
-.selectnav:active{
+.selectnav:active {
   border: 0px;
-  outline:0px;
+  outline: 0px;
 }
-
 
 /* Smartphones (portrait and landscape) ----------- */
 @media screen and (max-width: 1000px) {
@@ -209,33 +266,33 @@ export default {
 
 @media screen and (max-width: 550px) {
   #topper-content {
-  height: 160px;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+    height: 160px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
-  #router-container{
-  margin-top: 220px;
+  #router-container {
+    margin-top: 220px;
   }
   #navselect {
     top: 160px;
   }
-  #logo1{
-    object-fit:contain;
+  #logo1 {
+    object-fit: contain;
   }
   #callToday {
     text-align: center;
     margin: 0px;
   }
-  #navselect{
+  #navselect {
     margin-left: auto;
     margin-right: auto;
   }
-  #homeBackImg{
+  #homeBackImg {
     top: 220px !important;
   }
-  #topper-content{
-    justify-content:initial;
+  #topper-content {
+    justify-content: initial;
     padding-top: 0px;
   }
 }
