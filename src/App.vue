@@ -144,11 +144,11 @@ export default {
 #navselect {
   display: none;
   text-align: center;
-  padding: 15px 0px 15px 0px;
+  padding: 10px 0px 10px 0px;
   position: fixed;
   font-size: 18px;
   width: 100vw;
-  height: 30px;
+  height: 40px;
   top: 110px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
@@ -166,12 +166,36 @@ export default {
 }
 
 .selectnav{
+  text-align: center;
+  height: 40px;
+  width: fit-content;
   font-family: "Open Sans", sans-serif;
   border: 0px;
+  outline:0px;
   margin-left: 40px;
   color: black;
-  font-weight: 400;
+  font-weight: 400 !important;
+  font-size: 26px !important;
+  padding-left: 60px !important;
+  appearance: none;
+  background: rgb(255, 255, 255) url("./assets/menu-24px.svg") no-repeat center left;
 }
+
+.selectnav-content {
+  display: none;
+  position: absolute;
+  background-color: #612323;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.selectnav:active{
+  border: 0px;
+  outline:0px;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media screen and (max-width: 1000px) {
@@ -185,16 +209,16 @@ export default {
 
 @media screen and (max-width: 550px) {
   #topper-content {
-  height: 220px;
+  height: 160px;
   justify-content: center;
   display: flex;
   flex-direction: column;
   }
   #router-container{
-  margin-top: 280px;
+  margin-top: 220px;
   }
   #navselect {
-    top: 220px;
+    top: 160px;
   }
   #logo1{
     object-fit:contain;
@@ -208,7 +232,11 @@ export default {
     margin-right: auto;
   }
   #homeBackImg{
-    top: 280px !important;
+    top: 220px !important;
+  }
+  #topper-content{
+    justify-content:initial;
+    padding-top: 0px;
   }
 }
 </style>
