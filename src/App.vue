@@ -78,7 +78,32 @@ export default {
     },
     ddnNav(page){
       this.activePage = page;
+    },
+    stickyNav(){
+      const nav = document.querySelector("#nav")
+      const navselect = document.querySelector("#navselect")
+      const rc = document.querySelector("#router-container")
+      const topOffset = document.querySelector("#topper").offsetHeight;
+      if(window.scrollY > topOffset) {
+        console.log(navselect.offsetTop)
+        nav.style.position = "fixed"
+        nav.style.top = 0
+        navselect.style.position = "fixed"
+        navselect.style.top = 0
+        rc.style.marginTop = "60px"
+      } else {
+        console.log(navselect.offsetTop)
+        nav.style.position = "static"
+        navselect.style.position = "static"
+        rc.style.marginTop = 0
+      }
     }
+  },
+  created() {
+    window.addEventListener('scroll', this.stickyNav)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.stickyNav)
   }
 };
 </script>
@@ -93,14 +118,12 @@ export default {
 }
 
 #router-container {
-  margin-top: 170px;
+  margin-top: 0px;
 }
 
 #topper {
   background: white;
-  position: fixed;
-  top: 0px;
-  width: 100vw;
+  width: 100%;
 }
 
 #topper-content {
@@ -143,9 +166,9 @@ export default {
 #nav {
   text-align: center;
   padding: 15px 0px 15px 0px;
-  position: fixed;
+  position: static;
   font-size: 18px;
-  width: 100vw;
+  width: 100%;
   height: 30px;
   top: 110px;
   background-color: white;
@@ -167,9 +190,9 @@ export default {
   display: none;
   text-align: center;
   padding: 10px 0px 10px 0px;
-  position: fixed;
+  position: static;
   font-size: 18px;
-  width: 100vw;
+  width: 100%;
   height: 40px;
   top: 110px;
   background-color: rgb(255, 255, 255);
@@ -207,16 +230,16 @@ export default {
 .dropdown{
   cursor: pointer;
   height: 40px;
+  line-height: 40px;
   width: fit-content;
   font-family: "Open Sans", sans-serif;
   border: 0px;
   outline: 0px;
-  margin-left: 40px;
+  margin-left: 30px;
   color: black;
   font-weight: 400 !important;
-  font-size: 26px !important;
+  font-size: min(24px, 5.5vw) !important;
   padding-left: 60px !important;
-  appearance: none;
   background: rgb(255, 255, 255) url("./assets/menu-24px.svg") no-repeat center
     left;
 }
@@ -255,7 +278,7 @@ export default {
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1011px) {
   #nav {
     display: none;
   }
@@ -271,9 +294,7 @@ export default {
     display: flex;
     flex-direction: column;
   }
-  #router-container {
-    margin-top: 220px;
-  }
+  
   #navselect {
     top: 160px;
   }

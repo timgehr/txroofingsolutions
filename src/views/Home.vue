@@ -51,6 +51,7 @@ export default {
 }
 
 #home-message h3 {
+  margin-top: 0px;
   font-size: min(22px, 2.5vw);
   font-weight: 400;
 }
@@ -69,6 +70,6 @@ hr {
   height: 40vw;
   max-height: 350px;
   z-index: -1;
-  opacity: 0.93;
+  opacity: 1;
 }
 </style>
