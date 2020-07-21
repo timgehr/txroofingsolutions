@@ -38,22 +38,32 @@
         <a
           href="http://txroofingsolutions.com/available-roofing-options"
         >Roofing materials for homes</a> in the Dallas-Fort Worth area need to be energy-efficient and weather-resistant to survive the stormy spring weather as well as the hot and humid summers. In addition, these materials must be carefully selected, as some types of roofing materials, like reflective roofs, can help reduce energy costs by as much as 40 percent. Metal roofs and light colored shingles reduce the amount of heat absorbed and retained by a structure during the summer months, while also protecting against wind and hail damage. When you find the time has come to repair or replace your roof, look no further than Roofing Solutions of Texas,
-        <a href="http://txroofingsolutions.com/roofing-services">a Fort Worth roofing contractor</a>.
+        <a
+          href="http://txroofingsolutions.com/roofing-services"
+        >a Fort Worth roofing contractor</a>.
       </p>
       <p>Roofing Solutions of Texas strives to make every Arlington, TX, roofing project one that is quick and smooth. The goal remains to restore the home to its original condition or better with every job, and doing so without disrupting the occupants of the structure. We offer affordable pricing, quality advice, and timely installations, as well as making customer service a top priority at all times. Customers love the fact we offer a wide range of roofing solutions, from tile roofing to roll (flat) roofing, as each homeowner has unique needs. Call us today to learn more about how we can be of service to you.</p>
       <p>
         One question many homeowners have when it comes to Flower Mound roofing involves whether to repair or
-        <a href="http://txroofingsolutions.com/roofing-contractors-fort-worth">re-roof the structure</a>. Our company works to help you determine which method is best for you after doing an assessment. A general rule is to look at the number of damaged roof areas. If there are numerous bad spots, it is time to replace the roof, as you want to avoid the roof having patches in numerous locations. If only one or two repairs are needed, it is often better to make the repairs. This is just one of many factors that needs to be taken into consideration when deciding between
-        <a href="http://txroofingsolutions.com/roof-repair-fort-worth">Fort Worth roof repair</a> and roof replacement.
+        <a
+          href="http://txroofingsolutions.com/roofing-contractors-fort-worth"
+        >re-roof the structure</a>. Our company works to help you determine which method is best for you after doing an assessment. A general rule is to look at the number of damaged roof areas. If there are numerous bad spots, it is time to replace the roof, as you want to avoid the roof having patches in numerous locations. If only one or two repairs are needed, it is often better to make the repairs. This is just one of many factors that needs to be taken into consideration when deciding between
+        <a
+          href="http://txroofingsolutions.com/roof-repair-fort-worth"
+        >Fort Worth roof repair</a> and roof replacement.
       </p>
       <p>Homeowners often worry about getting insurance to pay for the roof repairs or replacement when the damage is beyond the owner's control and not due to neglect or aging. Our roofing contractors in Fort Worth can be of assistance here also, as they work with insurance companies every day. Our site covers what to expect when filing a claim and how the claims process works. In addition, you can learn more about what you should expect as you deal with the claims adjuster. Often, the contractors can work with you to get your claim approved, and the repairs or replacement roof paid for, while providing you with your options. We don't charge for this particular service.</p>
       <p>
         We are proud of what we offer to customers throughout Euless,
-        <a href="http://txroofingsolutions.com/fort-worth-roofing-company">Fort Worth</a>,
+        <a
+          href="http://txroofingsolutions.com/fort-worth-roofing-company"
+        >Fort Worth</a>,
         <a href="http://txroofingsolutions.com/roofing-arlington-tx">Arlington</a>,
         <a href="http://txroofingsolutions.com/flower-mound-roofing/">Flower Mound</a>,
         <a href="http://txroofingsolutions.com/roofer-keller-tx">Keller</a>, Coppell, Grapevine and the surrounding areas. In addition to offering roofing services, we complete repairs on fencing, decking, flooring, siding, gutters and interior restoration.
-        <a href="http://txroofingsolutions.com/free-inspection">Contact us today to learn more</a> about how we can be of help to you. Our reputation is stellar, thanks to our sincere customer service and fair business practices, and you can read customer testimonials on our site to hear great reviews. Roofing Solutions of Texas promises to continue its commitment to providing outstanding customer service to all clients, past, present and future.
+        <a
+          href="http://txroofingsolutions.com/free-inspection"
+        >Contact us today to learn more</a> about how we can be of help to you. Our reputation is stellar, thanks to our sincere customer service and fair business practices, and you can read customer testimonials on our site to hear great reviews. Roofing Solutions of Texas promises to continue its commitment to providing outstanding customer service to all clients, past, present and future.
       </p>
       <p>Please call us today to learn more about our trusted roofing solutions.</p>
     </div>
@@ -149,7 +159,7 @@ hr {
   height: 219px;
   text-align: center;
   margin-right: 10px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .ct-text {

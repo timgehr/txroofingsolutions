@@ -174,6 +174,7 @@ export default {
   top: 110px;
   background-color: white;
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
+  z-index: 1;
 }
 
 #nav a {
@@ -202,6 +203,7 @@ export default {
   top: 110px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
+  z-index: 1;
 }
 
 #navselect select {
