@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page home">
     <div id="home-group">
       <div id="home-message">
         <h1>At Roofing Solutions of Texas…</h1>
@@ -82,11 +82,8 @@ export default {
 </script>
 
 <style>
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 1200px;
+.page.home {
+  padding: 0px 0px 0px 0px;
 }
 
 #home-group {
@@ -118,6 +115,7 @@ export default {
   font-size: min(22px, 2.5vw);
   font-weight: 400;
 }
+
 hr {
   width: 90vw;
   border: 0.5px solid rgba(0, 0, 0, 0.082);
@@ -137,7 +135,7 @@ hr {
 }
 
 .roof-services {
-  padding: 30px 30px 30px 30px;
+  margin: 30px 30px 30px 30px;
   display: flex;
   width: 90vw;
   justify-content: center;
@@ -158,7 +156,6 @@ hr {
   width: 360px;
   height: 219px;
   text-align: center;
-  margin-right: 10px;
   z-index: 0;
 }
 
@@ -190,7 +187,6 @@ hr {
   object-fit: fill;
   width: 360px;
   height: auto;
-  margin-right: 20px;
   margin-left: 0px;
 }
 
@@ -214,9 +210,14 @@ hr {
   font-size: 28px;
 }
 
+.textwidget p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .textwidget a {
   text-decoration: none;
-  color: rgb(0, 140, 0);
+  color: rgb(0, 173, 78);
 }
 
 .textwidget a:hover {

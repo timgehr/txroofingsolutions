@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    Lol
+  <div class="page blog">
+    Blog
   </div>
 </template>

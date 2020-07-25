@@ -16,12 +16,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .reqfree {
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px 60px 0px;
 }
 
-h2 {
-  font-weight: 400;
-  text-emphasis: italic;
+.reqfree h2 {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: italic;
 }
 
 #gs-button {
