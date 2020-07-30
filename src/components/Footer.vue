@@ -41,6 +41,7 @@ export default {}
 
 .footer-text {
   color: rgb(97, 97, 97);
+  font-size: min(16px, 2.9vw);
 }
 
 .footer-text a {

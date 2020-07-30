@@ -3,7 +3,7 @@
     <h2>
       Request Your Free, No-Obligation Roofing Inspection
     </h2>
-    <button id="gs-button" v-on:click="$router.push('free-inspection')">GET SCHEDULED!</button>
+    <button class="big-button" v-on:click="$router.push('free-inspection')">GET SCHEDULED!</button>
   </div>
 </template>
 
@@ -24,30 +24,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-style: italic;
-}
-
-#gs-button {
-  font-size: 17px;
-  background: rgb(79, 148, 89);
-  box-shadow: 0px 5px 0px rgb(68, 129, 77);
-  font-family: "Open Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 700;
-  color: white;
-  height: 60px;
-  width: 180px;
-  border: none;
-  border-radius: 6px;
-}
-
-#gs-button:focus {
-  outline: 0px;
-}
-
-#gs-button:hover {
-  cursor: pointer;
-  background: rgb(92, 165, 103)
 }
 
 </style>

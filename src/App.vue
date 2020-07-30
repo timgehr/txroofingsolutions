@@ -148,6 +148,30 @@ a:hover {
   font-size: 34px;
 }
 
+.big-button {
+  font-size: 17px;
+  background: rgb(79, 148, 89);
+  box-shadow: 0px 5px 0px rgb(68, 129, 77);
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  color: white;
+  height: 60px;
+  width: 180px;
+  border: none;
+  border-radius: 6px;
+}
+
+.big-button:focus {
+  outline: 0px;
+}
+
+.big-button:hover {
+  cursor: pointer;
+  background: rgb(92, 165, 103)
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media screen and (max-width: 1011px) {
   #nav {

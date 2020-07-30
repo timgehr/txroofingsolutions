@@ -27,12 +27,18 @@
         allowfullscreen
       ></iframe>
       </div>
+      <callToday></callToday>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import CallToday from '../components/CallToday.vue'
+export default {
+  components: {
+    callToday: CallToday
+  }
+}
 </script>
 
 <style>
@@ -48,6 +54,7 @@ export default {}
 .learn hr {
   width: 100%;
   border: black 2px 2px;
+  margin: 30px 0px 30px 0px;
 }
 
 .video-container {

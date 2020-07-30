@@ -6,6 +6,9 @@ import FreeInspection from '../views/FreeInspection.vue'
 import ServiceArea from '../views/ServiceArea.vue'
 import Blog from '../views/Blog.vue'
 import Learn from '../views/Learn.vue'
+import BlogPost from '../components/BlogPost.vue'
+import MakeBlogPost from '../views/MakeBlogPost.vue'
+import EditBlogPost from '../views/EditBlogPost.vue'
 
 Vue.use(VueRouter)
 
@@ -13,7 +16,10 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      title: 'Roofing Solutions of Texas'
+    }
   },
   {
     path: '/roofing-services',
@@ -34,6 +40,21 @@ const routes = [
     path: '/blog',
     name: 'Blog',
     component: Blog
+  },
+  {
+    path: '/make-blog-post',
+    name: 'Make Blog Post',
+    component: MakeBlogPost
+  },
+  {
+    path: '/blog/:id',
+    name: 'Blog Post',
+    component: BlogPost
+  },
+  {
+    path: '/blog/:id/edit',
+    name: 'Edit Blog Post',
+    component: EditBlogPost
   },
   {
     path: '/free-inspection',
