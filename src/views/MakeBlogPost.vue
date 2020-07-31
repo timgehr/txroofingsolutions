@@ -45,7 +45,7 @@ export default {
       blogPost: {
         title: '',
         date: null,
-        blogContent: '',
+        content: '',
         imageURL: '',
         tags: []
       }
@@ -54,7 +54,7 @@ export default {
   methods: {
     submit () {
       this.blogPost.tags = this.tags.split(', ')
-      this.blogPost.date = new Date()
+      this.blogPost.date = new Date().toLocaleDateString()
 
       var postID = this.blogPost.title
         .replace(/\s+/g, '-')
@@ -65,8 +65,8 @@ export default {
         .set({
           title: this.blogPost.title,
           date: this.blogPost.date,
-          blogContent: this.blogPost.blogContent,
-          imageURL: this.blogPost.imageURL,
+          content: this.blogPost.content,
+          image: this.blogPost.imageURL,
           tags: this.blogPost.tags
         })
         .then(function (docRef) {
@@ -98,9 +98,6 @@ export default {
 
 .blogContainer {
   text-align: left;
-}
-
-.content.makeblogpost {
 }
 
 .blog {

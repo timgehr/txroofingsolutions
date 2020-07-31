@@ -21,7 +21,7 @@
         <p v-on:click="$router.push('about')">
           <router-link to="/about">About Us</router-link>
         </p>
-        <p v-on:click="$router.push('blog')">
+        <p v-on:click="$router.replace('blog')">
           <router-link to="/blog">Blog</router-link>
         </p>
         <p v-on:click="$router.push('free-inspection')">

@@ -5,7 +5,7 @@
         <h1>At Roofing Solutions of Texas…</h1>
         <h3>...we recognize that every roofing project has unique or special circumstances that need to be resolved to your satisfaction. With that in mind, Roofing Solutions of Texas wants to help you get a beautiful, long-lasting roof installed at a price that you can afford and appreciate.</h3>
       </div>
-      <img src="../assets/roofing3.jpg" id="homeBackImg" />
+      <img src="../assets/roofing4.jpg" id="homeBackImg" />
     </div>
     <reqFree></reqFree>
     <div class="roof-services">
@@ -125,11 +125,12 @@ hr {
 #homeBackImg {
   position: absolute;
   object-fit: cover;
+  object-position: 50% 80%;
   width: 100vw;
-  top: 170px;
+  top: 70px;
   right: 0px;
-  height: 40vw;
-  max-height: 350px;
+  height: 55vw;
+  max-height: 450px;
   z-index: -1;
   opacity: 1;
 }

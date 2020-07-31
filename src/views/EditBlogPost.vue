@@ -53,10 +53,11 @@ export default {
       db.collection('blogs')
         .doc(this.myPostID)
         .set({
+          id: this.myPostID,
           title: title.value,
-          date: new Date(),
-          blogContent: content.value,
-          imageURL: imageURL.value,
+          date: new Date().toLocaleDateString(),
+          content: content.value,
+          image: imageURL.value,
           tags: tags.value.split(', ')
         })
         .then(function (docRef) {
@@ -76,10 +77,10 @@ export default {
 
     function renderBlog (doc) {
       if (doc.title !== undefined) {
-        imageURL.value = doc.imageURL
+        imageURL.value = doc.image
         tags.value = doc.tags.join(', ')
         title.value = doc.title
-        content.value = doc.blogContent
+        content.value = doc.content
       }
     }
 

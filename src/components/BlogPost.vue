@@ -13,7 +13,7 @@ export default {
       id: this.$route.params.id,
       blog: {
         title: 'No Such Blog Exists',
-        blogContent:
+        content:
           "<p> Sorry, but the blog you're looking for does not exist.</p>",
         date: null
       }
@@ -29,11 +29,11 @@ export default {
         content.setAttribute('class', 'blogContent')
         const title = document.createElement('h1')
         const image = document.createElement('img')
-        image.setAttribute('src', doc.imageURL)
+        image.setAttribute('src', doc.image)
         image.setAttribute('class', 'blogImage')
 
         title.innerText = doc.title
-        content.innerHTML = markdown.toHTML(doc.blogContent)
+        content.innerHTML = markdown.toHTML(doc.content)
         blog.append(image)
         blog.append(title)
         blog.append(content)

@@ -1,13 +1,37 @@
 <template>
   <div class="page bloghub">
-    <router-link to="blog/common-types-of-roof-leaks">Post 1</router-link>
-    <router-link to="blog/common-types-of-roof-leaks/edit">Edit Post 1</router-link>
+    <div class="content bloghub" id="blogSnippetHub">
+    <div v-for="blog in blogs" v-bind:key="blog">
+      <blogsnippet :blog="blog"></blogsnippet>
+    </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+import db from '@/fb'
+import blogsnippet from '../components/BlogPostSnip'
 
+export default {
+  components: {
+    // eslint-disable-next-line
+    blogsnippet
+  },
+  data () {
+    return {
+      id: this.$route.params.id,
+      blogs: []
+    }
+  },
+  created () {
+    db.collection('blogs')
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          this.blogs.push(doc.data())
+        })
+      })
+  }
 }
 </script>
 

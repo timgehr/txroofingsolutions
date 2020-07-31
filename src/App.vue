@@ -146,6 +146,7 @@ a:hover {
   color: rgb(12, 134, 67);
   font-weight: 700;
   font-size: 34px;
+  transition: 0.5s;
 }
 
 .big-button {
@@ -169,7 +170,7 @@ a:hover {
 
 .big-button:hover {
   cursor: pointer;
-  background: rgb(92, 165, 103)
+  background: rgb(92, 165, 103);
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -193,13 +194,39 @@ a:hover {
     height: 100px;
   }
   #homeBackImg {
-    top: 160px !important;
+    top: 60px !important;
   }
   #topper-content {
     padding-top: 0px;
   }
   .page {
     min-height: calc(100vh - 330px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #topper {
+    display: none;
+  }
+  #home-group {
+    height: calc(55vw - 10px) !important;
+    align-items: flex-start !important;
+    margin-top: 10px;
+  }
+  #home-message {
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw !important;
+    align-items: flex-end;
+  }
+  #home-message h1 {
+    font-size: min(50px, 5vw) !important;
+  }
+  #home-message h3 {
+    width: 70vw;
+    margin-top: 0px;
+    font-size: min(22px, 3vw) !important;
+    font-weight: 400;
   }
 }
 </style>
