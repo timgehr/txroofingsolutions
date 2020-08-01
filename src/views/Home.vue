@@ -1,11 +1,11 @@
 <template>
   <div class="page home">
+    <img src="../assets/roofing4.jpg" id="homeBackImg" />
     <div id="home-group">
       <div id="home-message">
         <h1>At Roofing Solutions of Texas…</h1>
         <h3>...we recognize that every roofing project has unique or special circumstances that need to be resolved to your satisfaction. With that in mind, Roofing Solutions of Texas wants to help you get a beautiful, long-lasting roof installed at a price that you can afford and appreciate.</h3>
       </div>
-      <img src="../assets/roofing4.jpg" id="homeBackImg" />
     </div>
     <reqFree></reqFree>
     <div class="roof-services">

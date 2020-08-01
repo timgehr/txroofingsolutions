@@ -2,7 +2,7 @@
   <div id="app">
     <div id="topper">
       <div id="topper-content">
-        <img id="logo1" src="./assets/logo1.jpg" style="height: 80px;" />
+        <img id="logo1" src="./assets/logo2.png" style="height: 80px;" />
         <div id="forehead"></div>
         <div id="callToday">
           <h2>Call Today For Your Free Roofing Inspection:</h2>
@@ -45,18 +45,23 @@ export default {
       const navselect = document.querySelector('#navselect')
       const rc = document.querySelector('#router-container')
       const topOffset = document.querySelector('#topper').offsetHeight
+      const logo = document.querySelector('#logo2')
+      // const logoTopOffset = document.querySelector('#logo2').offsetHeight
       if (window.scrollY > topOffset) {
-        console.log(navselect.offsetTop)
         nav.style.position = 'fixed'
         nav.style.top = 0
         navselect.style.position = 'fixed'
         navselect.style.top = 0
         rc.style.marginTop = '60px'
       } else {
-        console.log(navselect.offsetTop)
         nav.style.position = 'static'
         navselect.style.position = 'static'
         rc.style.marginTop = 0
+      }
+      if (window.scrollY > 80) {
+        logo.style.height = '50px'
+      } else {
+        logo.style.height = '90px'
       }
     }
   },
@@ -190,6 +195,12 @@ a:hover {
   #callToday {
     text-align: center;
   }
+  #callToday h2 {
+    margin-right: 0px;
+  }
+  #callToday h1 {
+    margin-right: 0px;
+  }
   #topper {
     height: 100px;
   }
@@ -205,19 +216,26 @@ a:hover {
 }
 
 @media screen and (max-width: 500px) {
-  #topper {
-    display: none;
+  #callToday h1 a {
+    font-size: 20px;
+    padding-top: 0px;
+  }
+  #callToday h1 {
+    line-height: 25px;
   }
   #home-group {
     height: calc(55vw - 10px) !important;
     align-items: flex-start !important;
-    margin-top: 10px;
+  }
+  #homeBackImg {
+    top: 160px !important;
   }
   #home-message {
     display: flex;
     flex-direction: row;
     max-width: 80vw !important;
     align-items: flex-end;
+    margin-top: 10px;
   }
   #home-message h1 {
     font-size: min(50px, 5vw) !important;
@@ -227,6 +245,9 @@ a:hover {
     margin-top: 0px;
     font-size: min(22px, 3vw) !important;
     font-weight: 400;
+  }
+  #logo2 {
+    height: 90px;
   }
 }
 </style>

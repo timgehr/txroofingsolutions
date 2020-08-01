@@ -1,10 +1,9 @@
 <template>
   <div id="navselect">
-    <div
-      class="dropdown"
-      v-on:click="ddnShow = !ddnShow"
-    >
-      <img id="logo2" src="../assets/logo1.jpg" />
+    <div class="dropdown" v-on:click="ddnShow = !ddnShow">
+      <div id="logocontainer">
+        <img id="logo2" src="../assets/logo2.png" />
+      </div>
       <div class="dropdown-content" v-if="ddnShow">
         <p v-on:click="$router.push('/')">
           <router-link to="/">Home</router-link>
@@ -101,9 +100,17 @@ export default {
   width: 100%;
 }
 
+#logocontainer {
+  max-height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 #logo2 {
   padding: 5px 0px 5px 0px;
   height: 50px;
+  transition: 0.25s;
 }
 
 #navselect {
