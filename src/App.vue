@@ -15,6 +15,14 @@
     <!-- Nav -->
     <navBar></navBar>
     <navSelect></navSelect>
+    <div id="mtopper">
+      <div id="callToday">
+        <h2>Call Today For Your Free Roofing Inspection:</h2>
+        <h1>
+          <a :href="callNum">{{callStr}}</a>
+        </h1>
+      </div>
+    </div>
     <div id="router-container">
       <router-view />
     </div>
@@ -45,23 +53,39 @@ export default {
       const navselect = document.querySelector('#navselect')
       const rc = document.querySelector('#router-container')
       const topOffset = document.querySelector('#topper').offsetHeight
-      const logo = document.querySelector('#logo2')
       // const logoTopOffset = document.querySelector('#logo2').offsetHeight
       if (window.scrollY > topOffset) {
         nav.style.position = 'fixed'
         nav.style.top = 0
         navselect.style.position = 'fixed'
         navselect.style.top = 0
-        rc.style.marginTop = '60px'
+        if (window.innerWidth > 500) {
+          rc.style.marginTop = '60px'
+        }
+        document.getElementById('mtopper').style.paddingTop = '60px'
       } else {
         nav.style.position = 'static'
         navselect.style.position = 'static'
         rc.style.marginTop = 0
+        document.getElementById('mtopper').style.paddingTop = '0px'
       }
-      if (window.scrollY > 80) {
-        logo.style.height = '50px'
+      if (window.scrollY > 20) {
+        document.getElementById('logocontainer').style.width = '100%'
+        document.getElementById('callButton').style.width = '60px'
       } else {
-        logo.style.height = '90px'
+        document.getElementById('logocontainer').style.width = '100%'
+        document.getElementById('callButton').style.width = '0px'
+      }
+      if (window.scrollY > 100 && window.innerWidth < 500) {
+        document.getElementById('navselect').style.boxShadow =
+          '0 6px 4px rgba(0, 0, 0, 0.096)'
+        document.getElementById('mtopper').style.boxShadow =
+          '0 0 0 rgba(0, 0, 0)'
+      } else if (window.innerWidth < 500) {
+        document.getElementById('mtopper').style.boxShadow =
+          '0 6px 4px rgba(0, 0, 0, 0.096)'
+        document.getElementById('navselect').style.boxShadow =
+          '0 0 0 rgba(0, 0, 0)'
       }
     }
   },
@@ -134,6 +158,10 @@ a:hover {
   text-align: right;
 }
 
+#callToday {
+  z-index: 0;
+}
+
 #callToday h2 {
   font-size: 16px;
   font-weight: 400;
@@ -178,6 +206,11 @@ a:hover {
   background: rgb(92, 165, 103);
 }
 
+#mtopper {
+  display: none;
+  height: 100px;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media screen and (max-width: 1011px) {
   #nav {
@@ -216,12 +249,15 @@ a:hover {
 }
 
 @media screen and (max-width: 500px) {
-  #callToday h1 a {
-    font-size: 20px;
-    padding-top: 0px;
+  #navselect {
+    box-shadow: 0 0 0 white;
   }
-  #callToday h1 {
-    line-height: 25px;
+  #topper {
+    display: none;
+  }
+  #mtopper {
+    display: block;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
   }
   #home-group {
     height: calc(55vw - 10px) !important;
@@ -246,8 +282,8 @@ a:hover {
     font-size: min(22px, 3vw) !important;
     font-weight: 400;
   }
-  #logo2 {
-    height: 90px;
-  }
+}
+
+@media screen and (min-width: 500px) {
 }
 </style>
