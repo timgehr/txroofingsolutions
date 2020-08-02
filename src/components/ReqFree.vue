@@ -36,8 +36,8 @@ export default {
 }
 
 #webHome hr {
-  margin-bottom: 0px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
 #mobileHome hr {

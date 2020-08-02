@@ -59,7 +59,7 @@ export default {
         nav.style.top = 0
         navselect.style.position = 'fixed'
         navselect.style.top = 0
-        if (window.innerWidth > 600) {
+        if (window.innerWidth > 500) {
           rc.style.marginTop = '60px'
         } else {
           rc.style.marginTop = '0'
@@ -78,18 +78,18 @@ export default {
         document.getElementById('logocontainer').style.width = '100%'
         document.getElementById('callButton').style.width = '0px'
       }
-      if (window.scrollY > 70 && window.innerWidth < 600) {
+      if (window.scrollY > 70 && window.innerWidth < 500) {
         document.getElementById('navselect').style.boxShadow =
           '0 6px 4px rgba(0, 0, 0, 0.096)'
         document.getElementById('mtopper').style.boxShadow =
           '0 0 0 rgba(0, 0, 0)'
-      } else if (window.innerWidth < 600) {
+      } else if (window.innerWidth < 500) {
         document.getElementById('mtopper').style.boxShadow =
           '0 6px 4px rgba(0, 0, 0, 0.096)'
         document.getElementById('navselect').style.boxShadow =
           '0 0 0 rgba(0, 0, 0)'
       }
-      if (window.innerWidth > 600 && window.innerWidth < 1011) {
+      if (window.innerWidth > 500 && window.innerWidth < 1011) {
         document.getElementById('navselect').style.boxShadow =
           '0 6px 4px rgba(0, 0, 0, 0.096)'
       }
@@ -194,7 +194,7 @@ a:hover {
 }
 
 .big-button {
-  font-size: 17px;
+  font-size: 19px;
   background: #4f9459;
   box-shadow: 0px 5px 0px rgb(68, 129, 77);
   font-family: "Open Sans", sans-serif;
@@ -202,10 +202,10 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
   color: white;
-  height: 60px;
-  width: 180px;
+  height: 70px;
+  width: 200px;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .big-button:focus {
@@ -262,7 +262,7 @@ a:hover {
     height: 100px;
   }
   #homeBackImg {
-    top: 60px !important;
+    top: 160px !important;
   }
   #topper-content {
     padding-top: 0px;
@@ -272,7 +272,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #topper {
     display: none;
   }
@@ -283,9 +283,6 @@ a:hover {
   #home-group {
     height: calc(55vw - 10px) !important;
     align-items: flex-start !important;
-  }
-  #homeBackImg {
-    top: 160px !important;
   }
   #home-message {
     display: flex;
@@ -303,8 +300,5 @@ a:hover {
     font-size: min(22px, 3vw) !important;
     font-weight: 400;
   }
-}
-
-@media screen and (min-width: 500px) {
 }
 </style>

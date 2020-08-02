@@ -100,7 +100,7 @@ export default {
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
   left: 0px;
   text-align: left;
-  z-index: 1;
+  z-index: 10;
   line-height: 60px;
 }
 
@@ -163,7 +163,7 @@ export default {
   top: 110px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
-  z-index: 1;
+  z-index: 10;
 }
 
 #navselect select {

@@ -1,7 +1,7 @@
 <template>
   <div class="homeContainer">
     <div class="page home" id="webHome">
-      <img src="../assets/roofing4.jpg" id="homeBackImg" />
+      <img src="../assets/roofing3.jpg" id="homeBackImg" />
       <div id="home-group">
         <div id="home-message">
           <h1>At Roofing Solutions of Texas…</h1>
@@ -146,10 +146,10 @@ hr {
   object-fit: cover;
   object-position: 50% 80%;
   width: 100vw;
-  top: 70px;
+  top: 170px;
   right: 0px;
-  height: 55vw;
-  max-height: 450px;
+  height: 40vw;
+  max-height: 350px;
   z-index: -1;
   opacity: 1;
 }
@@ -250,7 +250,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #webHome{
     display: none !important;
   }

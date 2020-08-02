@@ -1,6 +1,8 @@
 <template>
   <div class="page home" id="mobileHome">
-    <img src="../assets/roofing5.jpg" id="homeBackImg-mobile" />
+    <div class="parallax-wrapper">
+      <img src="../assets/roofing5.jpg" id="homeBackImg-mobile" />
+    </div>
     <div id="home-group-mobile">
       <div id="home-message-mobile">
         <h1>At Roofing Solutions of Texas…</h1>
@@ -9,20 +11,26 @@
     </div>
     <reqFree></reqFree>
     <div class="roof-services-mobile">
-    <div class="mobileHomeShapes">
-      <div class="arrow-up"></div>
-      <div class="rectangle"></div>
-      <div class="arrow-up-white"></div>
-    </div>
+      <div class="mobileHomeShapes">
+        <div class="arrow-up"></div>
+        <div class="rectangle"></div>
+        <div class="arrow-up-white"></div>
+      </div>
       <h1>Roofing Services</h1>
       <div class="roof-service-mobile">
-          <router-link to="roof-replacement">Roof Replacement</router-link>
+        <router-link to="roof-replacement">
+          Roof Replacement
+          <img class="go-to-arrow" src="../assets/go-to-24px.svg" />
+        </router-link>
         <h3
           class="service-snippet-mobile"
         >Texas residents know that high temperatures, strong winds, heavy rain and even hail can speed up the need for roof replacement. The next time that you need the roof of your home replaced from damage or even just natural wear and tear after a few decades of use, make sure you turn to the best roofing contractors Fort Worth has to offer: Roofing Solutions of Texas.</h3>
       </div>
       <div class="roof-service-mobile">
-          <router-link to="roof-repair">Roof Leak Repair</router-link>
+        <router-link to="roof-repair">
+          Roof Leak Repair
+          <img class="go-to-arrow" src="../assets/go-to-24px.svg" />
+        </router-link>
         <h3
           class="service-snippet-mobile"
         >There are dozens of reasons that you might need to have your residential roof repaired. Heavy winds and storms could cause damage; leaks could crop up over time; you could be dealing with shrinkage; or there might be standing water. Whatever problems you encounter with your roof, seek out the best roof repair Fort Worth has to offer: Roofing Solutions of Texas.</h3>
@@ -80,9 +88,9 @@ export default {
 </script>
 
 <style>
-.mobileHomeShapes{
+.mobileHomeShapes {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 
 .arrow-up {
@@ -90,13 +98,13 @@ export default {
   height: 0;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-bottom: 50px solid #28536B;
+  border-bottom: 50px solid #28536b;
 }
 
 .rectangle {
   width: 100vw;
   height: 950px;
-  background: #28536B;
+  background: #28536b;
 }
 
 .arrow-up-white {
@@ -110,7 +118,6 @@ export default {
 }
 
 .roof-services-mobile {
-  margin: 60px 0px 60px 0px;
   display: flex;
   width: 90vw;
   height: 1000px;
@@ -119,6 +126,7 @@ export default {
   justify-content: flex-start;
   flex-grow: unset;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .roof-services-mobile h1 {
@@ -126,6 +134,7 @@ export default {
   margin-bottom: 0px;
   color: white;
   font-size: 38px;
+  z-index: 1;
 }
 
 .roof-service-mobile {
@@ -133,6 +142,7 @@ export default {
   max-height: 400px;
   color: rgba(255, 255, 255, 0.781);
   text-align: left;
+  z-index: 1;
 }
 
 .roof-service-mobile a {
@@ -141,6 +151,14 @@ export default {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.781);
   font-style: italic;
+}
+
+.roof-service-mobile a:hover {
+  text-decoration: none;
+}
+
+.roof-service-mobile a:hover .go-to-arrow {
+  margin-left: 10px;
 }
 
 .service-snippet-mobile {
@@ -156,18 +174,18 @@ export default {
   object-fit: cover;
   object-position: 50% 80%;
   width: 100vw;
-  top: 120px;
+  top: 60px;
   right: 0px;
   max-height: 600px;
   height: 120vw;
   z-index: -1;
-  opacity: 1;
 }
 
 #home-group-mobile {
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  width: 100%;
   max-height: 600px;
-  height: 120vw;
-  width: 90vw;
+  height: calc(120vw - 60px);
   display: flex;
   flex-direction: row;
 }
@@ -176,28 +194,29 @@ export default {
   text-align: right;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-  text-shadow: 0px 0px 9px rgba(255, 255, 255, 0.219);
+  padding: 20px 15px 0px 15px;
 }
 
 #home-message-mobile h1 {
   font-size: 5.8vw;
   text-align: left;
+  font-style: italic;
 }
 
 #home-message-mobile h3 {
   text-align: left;
   margin-top: 0px;
   font-size: 4.8vw;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .textwidget-mobile {
   font-family: "Open Sans", sans-serif;
-  padding: 0px 20px 40px 20px;
+  padding: 30px 20px 40px 20px;
   max-width: 900px;
   text-align: left;
   color: rgb(82, 82, 82);
+  background: #ffffff;
 }
 
 .textwidget-mobile h2 {
@@ -209,4 +228,13 @@ export default {
   line-height: 1.5;
 }
 
+.go-to-arrow {
+  filter: invert(49%) sepia(62%) saturate(4309%) hue-rotate(122deg)
+    brightness(95%) contrast(102%);
+  height: 24px;
+  width: 24px;
+  margin-left: 5px;
+  margin-top: 5px;
+  transition: 300ms;
+}
 </style>
