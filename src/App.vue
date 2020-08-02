@@ -59,8 +59,10 @@ export default {
         nav.style.top = 0
         navselect.style.position = 'fixed'
         navselect.style.top = 0
-        if (window.innerWidth > 500) {
+        if (window.innerWidth > 600) {
           rc.style.marginTop = '60px'
+        } else {
+          rc.style.marginTop = '0'
         }
         document.getElementById('mtopper').style.paddingTop = '60px'
       } else {
@@ -69,31 +71,39 @@ export default {
         rc.style.marginTop = 0
         document.getElementById('mtopper').style.paddingTop = '0px'
       }
-      if (window.scrollY > 20) {
+      if (window.scrollY > 37) {
         document.getElementById('logocontainer').style.width = '100%'
         document.getElementById('callButton').style.width = '60px'
       } else {
         document.getElementById('logocontainer').style.width = '100%'
         document.getElementById('callButton').style.width = '0px'
       }
-      if (window.scrollY > 100 && window.innerWidth < 500) {
+      if (window.scrollY > 70 && window.innerWidth < 600) {
         document.getElementById('navselect').style.boxShadow =
           '0 6px 4px rgba(0, 0, 0, 0.096)'
         document.getElementById('mtopper').style.boxShadow =
           '0 0 0 rgba(0, 0, 0)'
-      } else if (window.innerWidth < 500) {
+      } else if (window.innerWidth < 600) {
         document.getElementById('mtopper').style.boxShadow =
           '0 6px 4px rgba(0, 0, 0, 0.096)'
         document.getElementById('navselect').style.boxShadow =
           '0 0 0 rgba(0, 0, 0)'
       }
+      if (window.innerWidth > 600 && window.innerWidth < 1011) {
+        document.getElementById('navselect').style.boxShadow =
+          '0 6px 4px rgba(0, 0, 0, 0.096)'
+      }
+    },
+    navFix () {
     }
   },
   created () {
     window.addEventListener('scroll', this.stickyNav)
+    window.addEventListener('resize', this.stickyNav)
   },
   destroyed () {
     window.removeEventListener('scroll', this.stickyNav)
+    window.removeEventListener('resize', this.stickyNav)
   }
 }
 </script>
@@ -106,6 +116,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #000000;
+  overflow: hidden;
 }
 
 #router-container {
@@ -127,7 +138,7 @@ export default {
 
 a {
   text-decoration: none;
-  color: rgb(0, 173, 78);
+  color: #00ad4e;
 }
 
 a:hover {
@@ -184,7 +195,7 @@ a:hover {
 
 .big-button {
   font-size: 17px;
-  background: rgb(79, 148, 89);
+  background: #4f9459;
   box-shadow: 0px 5px 0px rgb(68, 129, 77);
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -207,8 +218,20 @@ a:hover {
 }
 
 #mtopper {
+  background: white;
+  border-top: 1px solid #0000000c;
+  height: 69px;
+  overflow: hidden;
   display: none;
-  height: 100px;
+}
+
+#mtopper h1 {
+  font-size: 22px;
+}
+
+#mtopper h1 a {
+  font-size: 22px;
+  padding-top: 0px;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -218,6 +241,7 @@ a:hover {
   }
   #navselect {
     display: flex;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.096);
   }
   #logo1 {
     display: none;
@@ -248,10 +272,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
-  #navselect {
-    box-shadow: 0 0 0 white;
-  }
+@media screen and (max-width: 600px) {
   #topper {
     display: none;
   }

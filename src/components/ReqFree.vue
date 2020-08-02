@@ -20,6 +20,14 @@ export default {
   padding: 20px 0px 0px 0px;
 }
 
+#mobileHome .reqfree {
+  padding: 20px 0px 60px 0px;
+}
+
+#mobileHome .big-button {
+  margin-top: 20px;
+}
+
 .reqfree h2 {
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,9 +35,13 @@ export default {
   font-style: italic;
 }
 
-.reqfree hr {
+#webHome hr {
   margin-bottom: 0px;
   margin-top: 30px;
+}
+
+#mobileHome hr {
+  display: none;
 }
 
 </style>

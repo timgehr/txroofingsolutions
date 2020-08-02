@@ -1,41 +1,36 @@
 <template>
   <div id="navselect">
     <div class="dropdown" v-on:click="ddnShow = !ddnShow">
-        <div id="callButton" v-on:click="call">
-          <svg id="callButtonIcon" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30">
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
-            />
-          </svg>
-        </div>
+      <div id="callButton" v-on:click="call">
+        <img id="callButtonIcon" class="greenPhone" src="../assets/call-24px.svg" />
+      </div>
       <div class="dropdownContainer">
         <div id="logocontainer">
           <img id="logo2" src="../assets/logo2.png" />
         </div>
       </div>
-        <div class="dropdown-content" v-if="ddnShow">
-          <p v-on:click="$router.push('/')">
-            <router-link to="/">Home</router-link>
-          </p>
-          <p v-on:click="$router.push('roofing-services')">
-            <router-link to="/roofing-services">Services</router-link>
-          </p>
-          <p v-on:click="$router.push('service-area')">
-            <router-link to="/service-area">Service Area</router-link>
-          </p>
-          <p v-on:click="$router.push('learn')">
-            <router-link to="/learn">Learn</router-link>
-          </p>
-          <p v-on:click="$router.push('about')">
-            <router-link to="/about">About Us</router-link>
-          </p>
-          <p v-on:click="$router.replace('blog')">
-            <router-link to="/blog">Blog</router-link>
-          </p>
-          <p v-on:click="$router.push('free-inspection')">
-            <router-link to="/free-inspection">Schedule Free Inspection</router-link>
-          </p>
+      <div class="dropdown-content" v-if="ddnShow">
+        <p v-on:click="$router.push('/')">
+          <router-link to="/">Home</router-link>
+        </p>
+        <p v-on:click="$router.push('roofing-services')">
+          <router-link to="/roofing-services">Services</router-link>
+        </p>
+        <p v-on:click="$router.push('service-area')">
+          <router-link to="/service-area">Service Area</router-link>
+        </p>
+        <p v-on:click="$router.push('learn')">
+          <router-link to="/learn">Learn</router-link>
+        </p>
+        <p v-on:click="$router.push('about')">
+          <router-link to="/about">About Us</router-link>
+        </p>
+        <p v-on:click="$router.replace('blog')">
+          <router-link to="/blog">Blog</router-link>
+        </p>
+        <p v-on:click="$router.push('free-inspection')">
+          <router-link to="/free-inspection">Schedule Free Inspection</router-link>
+        </p>
       </div>
     </div>
   </div>
@@ -60,6 +55,11 @@ export default {
 </script>
 
 <style>
+.greenPhone {
+  filter: invert(25%) sepia(10%) saturate(5672%) hue-rotate(107deg)
+    brightness(108%) contrast(98%);
+}
+
 .dropdown {
   text-align: center !important;
   cursor: pointer;
@@ -145,6 +145,7 @@ export default {
   align-items: center;
   transition: 200ms;
   z-index: 2;
+  overflow: hidden;
 }
 
 #callButton:hover {
