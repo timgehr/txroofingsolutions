@@ -31,7 +31,7 @@ export default {
         const image = document.createElement('img')
         image.setAttribute('src', doc.image)
         image.setAttribute('class', 'blogImage')
-
+        title.setAttribute('class', 'blogTitleTxt')
         title.innerText = doc.title
         content.innerHTML = markdown.toHTML(doc.content)
         blog.append(image)
@@ -62,12 +62,11 @@ export default {
   width: 100%;
   padding-top: 380px;
   text-align: left;
-  line-height: 27px;
 }
 
-.content.blogpost h1 {
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 0px 8px black;
+.blogTitleTxt {
+  color: rgba(255, 255, 255);
+  text-shadow: 0px 0px 8px rgb(0, 0, 0);
   width: calc(100% - 20px);
   position: absolute;
   display: flex;
@@ -76,7 +75,7 @@ export default {
   top: 160px;
   left: 0px;
   height: 400px;
-  background: rgba(0, 0, 0, 0.473);
+  background: rgba(0, 0, 0, 0.5);
   margin: 0px 0px 0px 0px;
   z-index: -1;
   padding: 0px 10px 0px 10px;
@@ -90,10 +89,17 @@ export default {
 .blogContent p {
   font-size: 18px;
   font-weight: 300;
+  line-height: 28px;
+}
+
+.blogContent li {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 36px;
 }
 
 .blogImage {
-  width: 100vw;
+  width: 100%;
   position: absolute;
   top: 160px;
   right: 0px;

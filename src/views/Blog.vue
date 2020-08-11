@@ -24,7 +24,7 @@ export default {
     }
   },
   created () {
-    db.collection('blogs')
+    db.collection('blogs').orderBy('date', 'desc')
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {

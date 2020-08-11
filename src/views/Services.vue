@@ -100,7 +100,7 @@ export default {
 }
 
 .page.services #top p {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .page.services #top h3 {

@@ -244,7 +244,7 @@ hr {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 748px) {
   .service-snippet {
     display: none !important;
   }
